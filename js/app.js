@@ -21,11 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Quitar clase active de todos los botones y contenidos
             tabButtons.forEach(btn => btn.classList.remove('active'));
             menuContents.forEach(content => content.classList.remove('active'));
 
-            // Activar el botón seleccionado y su sección correspondiente
             button.classList.add('active');
             const targetId = button.getAttribute('data-category');
             const targetContent = document.getElementById(targetId);
@@ -40,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnWhatsApp) {
         btnWhatsApp.addEventListener('click', () => {
             const telefono = '524454585767';
-            const mensaje = encodeURIComponent('¡Hola Kiki\'s Pizza! Vi su menú en su página web y me gustaría hacer un pedido.');
+            const mensaje = encodeURIComponent("¡Hola Kiki's Pizza! Vi su menú en su página web y me gustaría hacer un pedido.");
             window.open(`https://wa.me/${telefono}?text=${mensaje}`, '_blank');
         });
     }

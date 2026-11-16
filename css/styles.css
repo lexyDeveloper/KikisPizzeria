@@ -1,11 +1,11 @@
 :root {
-    --bg-main: #121212;        /* Negro carbón / industrial */
-    --bg-darker: #0a0a0a;      /* Negro profundo */
-    --bg-card: #1e1e1e;        /* Gris acero oscuro */
+    --bg-main: #121212;
+    --bg-darker: #0a0a0a;
+    --bg-card: #1e1e1e;
     --border-color: #2f2f2f;
-    --primary: #d9232e;        /* Rojo intenso del local y menú */
+    --primary: #d9232e;
     --primary-hover: #b51923;
-    --gold: #f59e0b;           /* Dorado lámparas y letrero Kiki's */
+    --gold: #f59e0b;
     --text-main: #f3f4f6;
     --text-muted: #9ca3af;
     --whatsapp: #25d366;
