@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiki's Pizza | Horno de Leña - Moroleón, Gto.</title>
+    <!-- Google Fonts: Oswald y Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-box">Kiki's</span> <span class="logo-sub">PIZZA</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#inicio">Inicio</a>
+                <a href="#menu">Menú</a>
+                <a href="#horarios">Horarios</a>
+                <a href="#ubicacion">Ubicación</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <span class="badge">🔥 DE UN BUEN HORNO DE LEÑA, FANTÁSTICA PIZZA</span>
+            <h1>Sabor artesanal directo del horno a tu mesa</h1>
+            <p>Disfruta nuestras pizzas a la leña, sandwiches italianos, antojitos y pastas en un ambiente único en Moroleón.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Ver Carta Completa</a>
+                <a href="tel:4454585767" class="btn btn-outline">📞 Llamar: 445 458 5767</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Menú Completo -->
+    <section id="menu" class="section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Carta</h2>
+            <p class="section-subtitle">Todo preparado al momento en nuestro horno de leña</p>
+
+            <!-- Pestañas de Categorías (4 secciones segmentadas) -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="pizzas">🍕 Pizzas</button>
+                <button class="tab-btn" data-category="sandwiches">🥖 Sandwiches</button>
+                <button class="tab-btn" data-category="antojos">🍟 Antojos</button>
+                <button class="tab-btn" data-category="pastas">🍝 Pastas</button>
+            </div>
+
+            <!-- CATEGORÍA 1: PIZZAS -->
+            <div class="menu-content active" id="pizzas">
+                <div class="sizes-banner">
+                    <h3>Elige el tamaño de tu pizza</h3>
+                    <div class="sizes-grid">
+                        <div class="size-item">
+                            <span class="size-name">MINI</span>
+                            <span class="size-price">$45</span>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-name">INDIVIDUAL</span>
+                            <span class="size-price">$65</span>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-name">CHICA</span>
+                            <span class="size-price">$100</span>
+                            <span class="cheese-crust">Orilla queso: <strong>$120</strong></span>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-name">MEDIANA</span>
+                            <span class="size-price">$150</span>
+                            <span class="cheese-crust">Orilla queso: <strong>$170</strong></span>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-name">GRANDE</span>
+                            <span class="size-price">$180</span>
+                            <span class="cheese-crust">Orilla queso: <strong>$200</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-menu">
+                    <div class="card">
+                        <div class="card-header"><h3>PEPPERONI</h3><span class="tag">Clásica</span></div>
+                        <p>Salsa de pizza, pepperoni y extra queso.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>CARNES FRÍAS</h3></div>
+                        <p>Jamón, salchicha, chorizo, pepperoni, carne molida.</p>
+                    </div>
+                    <div class="card highlight-card">
+                        <div class="card-header"><h3>KIKI'S COMBINADA</h3><span class="tag-gold">⭐ Especial</span></div>
+                        <p>Jamón, salchicha, pepperoni, chorizo, chile, morrón, champiñones y cebolla.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>ITALIANA</h3></div>
+                        <p>Carne molida, pepperoni, champiñones, chile, morrón y cebolla.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>HAWAIIANA</h3></div>
+                        <p>Piña, jamón y salchicha.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>JALAPEÑA</h3></div>
+                        <p>Chorizo, carne molida, chile morrón, cebolla y jalapeños.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>BBQ</h3></div>
+                        <p>Queso mozarela, pollo a la parrilla, salsa bbq, cebolla roja y cilantro.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA 2: SANDWICHES ITALIANOS -->
+            <div class="menu-content" id="sandwiches">
+                <p class="category-note">Sandwiches italianos horneados en casa en horno de leña.</p>
+                <div class="grid-menu">
+                    <div class="card">
+                        <div class="card-header"><h3>CESAR</h3><span class="price-pill">$50</span></div>
+                        <p>Pollo a la parrilla, lechuga romana, queso parmesano, jitomate, cebolla y aderezo.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>ITALIANO</h3><span class="price-pill">$50</span></div>
+                        <p>Salchicha italiana, vegetales a la parrilla con queso asadero.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>DE ARRACHERA</h3><span class="price-pill">$60</span></div>
+                        <p>Arrachera a la parrilla, jitomate, cebolla, lechuga y queso asadero.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA 3: ANTOJOS (Adicionales) -->
+            <div class="menu-content" id="antojos">
+                <p class="category-note">Especialidades horneadas y complementos crujientes</p>
+                <div class="grid-menu">
+                    <div class="card">
+                        <div class="card-header"><h3>TAKIROS PIZZA</h3><span class="price-pill">$60</span></div>
+                        <p>Deliciosos rollos crujientes con ingredientes de la casa horneados a la leña.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>PIZZA CALZONE</h3><span class="price-pill">$60</span></div>
+                        <p>Empanada de pizza gigante rellena de queso y tus ingredientes favoritos.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>ALITAS DE POLLO</h3><span class="price-pill">$65</span></div>
+                        <p>Bañadas en salsa a la BBQ o picosas.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>PAPAS A LA FRANCESA</h3><span class="price-pill">$20</span></div>
+                        <p>El complemento perfecto, doraditas y crujientes.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>CHICKEN BAKE</h3><span class="price-pill">$65</span></div>
+                        <p>Pollo, cebolla y tocino envueltos en masa artesanal gratinada.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA 4: PASTAS Y LASAGNA -->
+            <div class="menu-content" id="pastas">
+                <div class="grid-menu">
+                    <div class="card">
+                        <div class="card-header"><h3>KUNG PAO</h3></div>
+                        <p>Cacahuate, chile de árbol, cebollín, y spaguetti acompañado de una rica salsa china.</p>
+                        <div class="dual-price">
+                            <span>Pollo o camarón: <strong>$90</strong></span>
+                            <span>Combinado: <strong>$130</strong></span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>MARINERA</h3></div>
+                        <p>Salsa de tomate casera, champiñones, queso parmesano.</p>
+                        <div class="dual-price">
+                            <span>Pollo o camarón: <strong>$90</strong></span>
+                            <span>Combinado: <strong>$130</strong></span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>ALFREDO</h3></div>
+                        <p>Una cremosa salsa alfredo con champiñones.</p>
+                        <div class="dual-price">
+                            <span>Pollo o camarón: <strong>$90</strong></span>
+                            <span>Combinado: <strong>$130</strong></span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>BOLOÑESA</h3><span class="price-pill">$90</span></div>
+                        <p>Salchicha italiana, champiñones, acompañada con su rica salsa casera tipo boloñesa.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>LASAGNA ITALIANA</h3><span class="price-pill">$90</span></div>
+                        <p>Capas de pasta, carne y abundante queso gratinado al horno de leña.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caja de Pedido Directo -->
+            <div class="cta-box">
+                <h3>¿Ya se te antojó? Haz tu pedido ahora</h3>
+                <p>Pide para recoger en sucursal o pregunta por envío a domicilio en Moroleón.</p>
+                <div class="cta-actions">
+                    <button id="btnWhatsApp" class="btn btn-whatsapp">💬 Pedir por WhatsApp</button>
+                    <a href="tel:4454585767" class="btn btn-primary">📞 Llamar al 445 458 5767</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Horarios y Ubicación -->
+    <section id="horarios" class="section bg-darker">
+        <div class="container grid-info">
+            <div class="info-card">
+                <h2>🕒 Horarios de Atención</h2>
+                <ul class="schedule-list">
+                    <li><span>Lunes:</span> <strong>1:30 PM – 10:00 PM</strong></li>
+                    <li class="closed"><span>Martes:</span> <strong>Cerrado</strong></li>
+                    <li><span>Miércoles:</span> <strong>1:30 PM – 10:00 PM</strong></li>
+                    <li><span>Jueves:</span> <strong>1:30 PM – 10:00 PM</strong></li>
+                    <li><span>Viernes:</span> <strong>1:30 PM – 10:00 PM</strong></li>
+                    <li><span>Sábado:</span> <strong>1:00 PM – 10:00 PM</strong></li>
+                    <li><span>Domingo:</span> <strong>1:00 PM – 10:00 PM</strong></li>
+                </ul>
+            </div>
+
+            <div class="info-card" id="ubicacion">
+                <h2>📍 Visítanos o Pide</h2>
+                <p class="address">
+                    <strong>Dirección:</strong><br>
+                    Del Cartero 42, Col. Constituyentes,<br>
+                    38800 Moroleón, Guanajuato.
+                </p>
+                <p class="phone">
+                    <strong>Teléfono directo:</strong><br>
+                    <a href="tel:4454585767">445 458 5767</a>
+                </p>
+                <a href="https://maps.app.goo.gl/2pxG9FmsqHazRQCR9" target="_blank" rel="noopener noreferrer" class="btn btn-primary full-width">
+                    🗺️ Ver ubicación en Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year"></span> <strong>Kiki's Pizza</strong> — Horno de Leña | Moroleón, Guanajuato.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
