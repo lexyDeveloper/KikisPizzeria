@@ -63,6 +63,10 @@ h1, h2, h3, .logo, .size-name {
     gap: 8px;
 }
 
+.logo img{
+    height: 70px;
+}
+
 .logo-box {
     background: #000;
     color: var(--gold);
@@ -510,6 +514,11 @@ h1, h2, h3, .logo, .size-name {
     font-weight: 700;
     text-decoration: none;
     font-size: 1.25rem;
+}
+
+.mapa{
+    padding-top: 40px;
+
 }
 
 /* Footer */
