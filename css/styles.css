@@ -40,7 +40,6 @@ h1, h2, h3, .logo, .size-name {
     margin: 0 auto;
 }
 
-/* Navbar */
 .navbar {
     background: rgba(10, 10, 10, 0.95);
     border-bottom: 2px solid var(--primary);
@@ -68,14 +67,12 @@ h1, h2, h3, .logo, .size-name {
     height: 70px;
 }
 
-/* Contenedor de Logo + Etiqueta de Estado */
 .brand-group {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-/* Base de la etiqueta de estado */
 .status-badge {
     display: inline-flex;
     align-items: center;
@@ -96,7 +93,6 @@ h1, h2, h3, .logo, .size-name {
     border-radius: 50%;
 }
 
-/* Estado ABIERTO: Verde Neón */
 .status-open {
     background-color: rgba(57, 255, 20, 0.12);
     color: #39ff14;
@@ -110,7 +106,6 @@ h1, h2, h3, .logo, .size-name {
     animation: pulseNeon 1.8s infinite;
 }
 
-/* Estado CERRADO: Gris Apagado */
 .status-closed {
     background-color: rgba(107, 114, 128, 0.12);
     color: #6b7280;
@@ -127,7 +122,6 @@ h1, h2, h3, .logo, .size-name {
     50% { opacity: 0.45; transform: scale(0.85); }
 }
 
-/* Ajuste para pantallas muy pequeñas (celulares angostos) */
 @media (max-width: 420px) {
     .logo img {
         height: 54px;
@@ -183,7 +177,6 @@ h1, h2, h3, .logo, .size-name {
     cursor: pointer;
 }
 
-/* Hero Section */
 .hero {
     background: linear-gradient(rgba(10, 10, 10, 0.78), rgba(18, 18, 18, 0.95)),
                 url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
@@ -227,7 +220,6 @@ h1, h2, h3, .logo, .size-name {
     flex-wrap: wrap;
 }
 
-/* Botones */
 .btn {
     display: inline-block;
     padding: 0.85rem 1.8rem;
@@ -280,7 +272,6 @@ h1, h2, h3, .logo, .size-name {
     margin-top: 1.5rem;
 }
 
-/* Secciones */
 .section {
     padding: 4.5rem 0;
 }
@@ -305,7 +296,6 @@ h1, h2, h3, .logo, .size-name {
     font-size: 0.95rem;
 }
 
-/* Pestañas del Menú */
 .menu-tabs {
     display: flex;
     justify-content: center;
@@ -359,7 +349,6 @@ h1, h2, h3, .logo, .size-name {
     font-style: italic;
 }
 
-/* Banner de Tamaños de Pizza */
 .sizes-banner {
     background: linear-gradient(135deg, #1e1e1e 0%, #261617 100%);
     border: 1px solid var(--primary);
@@ -415,7 +404,6 @@ h1, h2, h3, .logo, .size-name {
     margin-top: 4px;
 }
 
-/* Tarjetas de Platillos */
 .grid-menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -503,7 +491,6 @@ h1, h2, h3, .logo, .size-name {
     font-size: 1rem;
 }
 
-/* CTA Box */
 .cta-box {
     background: linear-gradient(90deg, #1e1e1e 0%, #2b1214 100%);
     border: 1px solid var(--primary);
@@ -531,7 +518,6 @@ h1, h2, h3, .logo, .size-name {
     flex-wrap: wrap;
 }
 
-/* Horarios y Ubicación */
 .grid-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -592,7 +578,6 @@ h1, h2, h3, .logo, .size-name {
 
 }
 
-/* Footer */
 .footer {
     background: #050505;
     color: var(--text-muted);
@@ -602,7 +587,6 @@ h1, h2, h3, .logo, .size-name {
     border-top: 1px solid var(--border-color);
 }
 
-/* Sección de Reseñas */
 .bg-reviews {
     background-color: #161616;
     border-top: 1px solid var(--border-color);
@@ -707,7 +691,6 @@ h1, h2, h3, .logo, .size-name {
     margin-top: 2.5rem;
 }
 
-/* Ajuste responsivo para el mapa que agregaste */
 .mapa {
     display: block;
     margin: 2.5rem auto 0;
@@ -717,7 +700,6 @@ h1, h2, h3, .logo, .size-name {
     border: 1px solid var(--border-color) !important;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
