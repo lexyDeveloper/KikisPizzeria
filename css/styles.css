@@ -18,6 +18,7 @@
 }
 
 html {
+    scroll-padding-top: 50px;
     scroll-behavior: smooth;
 }
 
@@ -65,6 +66,76 @@ h1, h2, h3, .logo, .size-name {
 
 .logo img{
     height: 70px;
+}
+
+/* Contenedor de Logo + Etiqueta de Estado */
+.brand-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Base de la etiqueta de estado */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+/* Estado ABIERTO: Verde Neón */
+.status-open {
+    background-color: rgba(57, 255, 20, 0.12);
+    color: #39ff14;
+    border: 1px solid #39ff14;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.35), inset 0 0 6px rgba(57, 255, 20, 0.15);
+}
+
+.status-open .status-dot {
+    background-color: #39ff14;
+    box-shadow: 0 0 8px #39ff14;
+    animation: pulseNeon 1.8s infinite;
+}
+
+/* Estado CERRADO: Gris Apagado */
+.status-closed {
+    background-color: rgba(107, 114, 128, 0.12);
+    color: #6b7280;
+    border: 1px solid #374151;
+    box-shadow: none;
+}
+
+.status-closed .status-dot {
+    background-color: #4b5563;
+}
+
+@keyframes pulseNeon {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(0.85); }
+}
+
+/* Ajuste para pantallas muy pequeñas (celulares angostos) */
+@media (max-width: 420px) {
+    .logo img {
+        height: 54px;
+    }
+    .status-badge {
+        padding: 4px 9px;
+        font-size: 0.75rem;
+    }
 }
 
 .logo-box {

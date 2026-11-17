@@ -9,16 +9,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="img/KiKiSlogo.png">
+    <link rel="icon" type="image/png" href="img/KiKiSIcono3.png">
 </head>
 <body>
 
     <!-- Barra de Navegación -->
     <header class="navbar">
+        <!-- Busca esta parte en tu header y déjala así: -->
         <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="img/KiKiSlogo.png" alt="">
-            </a>
+            <div class="brand-group">
+                <a href="#" class="logo">
+                    <img src="img/KiKiSlogo.png" alt="Kiki's Pizza">
+                </a>
+                <!-- Etiqueta dinámica de estado -->
+                <span id="statusBadge" class="status-badge status-closed">
+                    <span class="status-dot"></span>
+                    <span id="statusText">Cerrado</span>
+                </span>
+            </div>
+
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
             <nav class="nav-links" id="navLinks">
                 <a href="#inicio">Inicio</a>
@@ -309,9 +318,6 @@
                     <strong>Teléfono directo:</strong><br>
                     <a href="tel:4454585767">445 458 5767</a>
                 </p>
-                <a href="https://maps.app.goo.gl/2pxG9FmsqHazRQCR9" target="_blank" rel="noopener noreferrer" class="btn btn-primary full-width">
-                    🗺️ Ver ubicación en Google Maps
-                </a>
             </div>
             
         </div>
