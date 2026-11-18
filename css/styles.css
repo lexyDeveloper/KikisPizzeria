@@ -179,7 +179,7 @@ h1, h2, h3, .logo, .size-name {
 
 .hero {
     background: linear-gradient(rgba(10, 10, 10, 0.78), rgba(18, 18, 18, 0.95)),
-                url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+                url('https://lexydeveloper.github.io/KikisPizzeria/img/KikisCombinadaPizza.jpeg') center/cover no-repeat;
     padding: 6.5rem 0 5rem;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
