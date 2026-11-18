@@ -179,7 +179,7 @@ h1, h2, h3, .logo, .size-name {
 
 .hero {
     background: linear-gradient(rgba(10, 10, 10, 0.78), rgba(18, 18, 18, 0.95)),
-                url('https://lexydeveloper.github.io/KikisPizzeria/img/KikisCombinadaPizza.jpeg') center/cover no-repeat;
+                url('/img/KikisCombinadaPizza.jpeg') center/cover no-repeat;
     padding: 6.5rem 0 5rem;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
@@ -540,6 +540,17 @@ h1, h2, h3, .logo, .size-name {
     padding-bottom: 0.6rem;
 }
 
+.imgButton{
+    display:block;
+    position:absolute;
+    top: 90%;
+    left: 95%;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: var(--gold);
+}
+
 .schedule-list {
     list-style: none;
 }
@@ -723,5 +734,9 @@ h1, h2, h3, .logo, .size-name {
 
     .hero h1 {
         font-size: 2.1rem;
+    }
+
+    html{
+        scroll-padding-top: 50px;
     }
 }
