@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!statusBadge || !statusText) return;
 
         const ahoraMexico = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Mexico_City" }));
-        const dia = ahoraMexico.getDay(); // 0 = Domingo, 1 = Lunes, 2 = Martes, ..., 6 = Sábado
+        const dia = ahoraMexico.getDay();
         const minutosActuales = (ahoraMexico.getHours() * 60) + ahoraMexico.getMinutes();
 
         const horarios = {
