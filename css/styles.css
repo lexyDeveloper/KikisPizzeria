@@ -11,6 +11,11 @@
     --whatsapp: #25d366;
 }
 
+*::selection{
+    color: #000;
+    background-color: var(--gold);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,11 +25,19 @@
 html {
     scroll-padding-top: 50px;
     scroll-behavior: smooth;
+    background-color: #000;
+    
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-main);
+    /* background-color: var(--bg-main); */
+    background: linear-gradient(rgba(10, 10, 10, 0.78), rgba(18, 18, 18, 0.95)),
+                url('/img/Texturas/LadrilloFondo.jpg');
+    background-position: center;
+    background-size: cover, 900px auto;
+    background-repeat: no-repeat, repeat;
+    
     color: var(--text-main);
     line-height: 1.6;
 }
@@ -38,6 +51,7 @@ h1, h2, h3, .logo, .size-name {
     width: 90%;
     max-width: 1120px;
     margin: 0 auto;
+    
 }
 
 .navbar {
@@ -711,6 +725,10 @@ h1, h2, h3, .logo, .size-name {
     border: 1px solid var(--border-color) !important;
 }
 
+.info-card .imgCard{
+    width: 55%;
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -738,5 +756,9 @@ h1, h2, h3, .logo, .size-name {
 
     html{
         scroll-padding-top: 50px;
+    }
+
+    .info-card .imgCard{
+        width: 85%;
     }
 }
