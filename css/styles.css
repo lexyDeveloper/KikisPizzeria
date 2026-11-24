@@ -729,7 +729,7 @@ h1, h2, h3, .logo, .size-name {
     width: 55%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
     .menu-toggle {
         display: block;
     }
