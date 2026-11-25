@@ -13,6 +13,26 @@
 </head>
 <body>
 
+    <!-- VIDEO PROMOCIONAL RESPONSIVE -->
+    <div id="promoOverlay">
+    <div class="promo-box">
+        <a href="#"><button id="cerrarPromo" aria-label="Cerrar">✕</button></a>
+        
+        <video id="promoVideo" autoplay muted loop playsinline preload="auto">
+        <source src="img/videos/pizzaChicago.mp4" type="video/mp4">
+        </video>
+
+        <div class="promo-texto">
+        <h2>¡NUEVO PRODUCTO! PIZZA ESTILO CHICAGO</h2>
+        <p>Ya está disponible en nuestra tienda.</p>
+        <a href="#chicago" class="btn-ver" onclick="cerrarPromo()">Ver producto</a>
+        </div>
+    </div>
+    </div>
+
+    <script>
+    
+    </script>
     <header class="navbar">
         <div class="container nav-container">
             <div class="brand-group">
@@ -143,11 +163,20 @@
                             <span>Costo extra segun el tamaño: <strong>$40</strong></span>
                         </div>
                     </div>
-                    <div class="card">
+                    <div id="chicago" class="card">
                         <div class="card-header"><h3>Pizza de Arrachera</h3><span class="price-pill">+ $40</span></div>
                         <p>Cebolla, Chile morrón, Champiñones y Arrachera.</p>
                         <div class="dual-price">
                             <span>Costo extra segun el tamaño: <strong>$40</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="card highlight-card">
+                        <div class="card-header"><h3>PIZZA ESTILO CHICAGO</h3><span class="tag-gold">⭐ Novedades</span></div>
+                        <p>MUCHO QUESO, peperoni, salsa estilo Chicago.</p>
+                        <div class="dual-price">
+                            <span>Mediana: <strong>$210</strong></span>
+                            <span>Grande: <strong>$250</strong></span>
                         </div>
                     </div>
                 </div>

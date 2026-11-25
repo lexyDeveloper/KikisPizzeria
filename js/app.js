@@ -83,3 +83,22 @@ document.addEventListener('DOMContentLoaded', () => {
     actualizarEstadoNegocio();
     setInterval(actualizarEstadoNegocio, 60000);
 });
+
+
+function cerrarPromo() {
+    const overlay = document.getElementById('promoOverlay');
+    const video = document.getElementById('promoVideo');
+    video.pause();
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+    }
+
+    document.getElementById('cerrarPromo').addEventListener('click', cerrarPromo);
+
+    // Cerrar si toca afuera en PC
+    document.getElementById('promoOverlay').addEventListener('click', function(e) {
+    if (e.target === this) cerrarPromo();
+    });
+
+    // Evita que la página de atrás haga scroll mientras está el video
+    document.body.style.overflow = 'hidden';

@@ -729,6 +729,85 @@ h1, h2, h3, .logo, .size-name {
     width: 55%;
 }
 
+#promoOverlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.promo-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    overflow: hidden;
+}
+
+#promoVideo {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    /* object-fit: cover; */
+    display: block;
+}
+
+#cerrarPromo {
+    position: absolute;
+    top: max(12px, env(safe-area-inset-top));
+    right: 14px;
+    z-index: 10;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.95);
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.promo-texto {
+    text-align: center;
+    padding: 18px 16px calc(20px + env(safe-area-inset-bottom));
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+    flex-shrink: 0;
+}
+
+.promo-texto h2 {
+    margin: 0 0 4px 0;
+    font-size: clamp(20px, 5vw, 32px);
+    color: #ffcc00;
+}
+
+.promo-texto p {
+    margin: 0;
+    font-size: clamp(14px, 3.5vw, 17px);
+}
+
+.btn-ver {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 12px 28px;
+    background: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    font-size: clamp(14px, 4vw, 16px);
+}
+
 @media (max-width: 950px) {
     .menu-toggle {
         display: block;
@@ -760,5 +839,18 @@ h1, h2, h3, .logo, .size-name {
 
     .info-card .imgCard{
         width: 85%;
+    }
+
+    #promoOverlay {
+        padding: 20px;
+    }
+    .promo-box {
+        width: min(90vw, 900px);
+        height: auto;
+        max-height: 92vh;
+        border-radius: 16px;
+    }
+    #promoVideo {
+        max-height: 65vh;
     }
 }
