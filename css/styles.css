@@ -31,9 +31,6 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    /* background-color: var(--bg-main); */
-    background: linear-gradient(rgba(10, 10, 10, 0.78), rgba(18, 18, 18, 0.95)),
-                url('https://lexydeveloper.github.io/KikisPizzeria/img/Texturas/LadrilloFondo.jpg');
     background-position: center;
     background-size: cover, 900px auto;
     background-repeat: no-repeat, repeat;
@@ -192,8 +189,7 @@ h1, h2, h3, .logo, .size-name {
 }
 
 .hero {
-    background: linear-gradient(rgba(10, 10, 10, 0.78), rgba(18, 18, 18, 0.95)),
-                url('https://lexydeveloper.github.io/KikisPizzeria/img/KikisCombinadaPizza.jpeg') center/cover no-repeat;
+    
     padding: 6.5rem 0 5rem;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
