@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizza Loader</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+#loader{position:fixed;inset:0;background:#000;z-index:99999;display:flex;align-items:center;justify-content:center;opacity:1;visibility:visible;transition:opacity .5s ease,visibility .5s ease}
+#loader.hide{opacity:0;visibility:hidden;pointer-events:none}
+.pizza{position:relative;width:280px;height:280px}
+.rebanada{position:absolute;width:50%;height:50%;left:25%;top:0;object-fit:contain;transform-origin:50% 100%;opacity:1;transition:opacity .12s ease}
+.rebanada.off{opacity:0}
+#contenido{min-height:100vh;opacity:0;transition:opacity .5s ease}
+#contenido.show{opacity:1}
+</style>
+</head>
+<body>
+<div id="loader">
+<div class="pizza" id="pizza"></div>
+</div>
+<main id="contenido">
+<h1>Bienvenido a mi página</h1>
+</main>
+<script>
+const DURACION_CARGA=2000;
+const NUM_REBANADAS=8;
+const pizza=document.getElementById("pizza");
+let rebanadas=[];
+for(let i=0;i<NUM_REBANADAS;i++){
+const imagen=document.createElement("img");
+imagen.src="img/Logos/pizza1.png";
+imagen.classList.add("rebanada");
+imagen.alt="";
+imagen.style.transform=`rotate(${i*(360/NUM_REBANADAS)}deg)`;
+pizza.appendChild(imagen);
+rebanadas.push(imagen);
+}
+const INTERVALO=DURACION_CARGA/NUM_REBANADAS;
+let actual=0;
+rebanadas[actual].classList.add("off");
+const animacion=setInterval(()=>{
+rebanadas[actual].classList.remove("off");
+actual=(actual+1)%NUM_REBANADAS;
+rebanadas[actual].classList.add("off");
+},INTERVALO);
+setTimeout(()=>{
+clearInterval(animacion);
+document.getElementById("loader").classList.add("hide");
+document.getElementById("contenido").classList.add("show");
+},DURACION_CARGA);
+</script>
+</body>
+</html>

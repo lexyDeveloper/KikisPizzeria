@@ -92,13 +92,56 @@ function cerrarPromo() {
     overlay.style.display = 'none';
     document.body.style.overflow = '';
     }
-
     document.getElementById('cerrarPromo').addEventListener('click', cerrarPromo);
-
-    // Cerrar si toca afuera en PC
     document.getElementById('promoOverlay').addEventListener('click', function(e) {
     if (e.target === this) cerrarPromo();
     });
-
-    // Evita que la página de atrás haga scroll mientras está el video
     document.body.style.overflow = 'hidden';
+
+
+
+
+const DURACION_CARGA = 3000;
+const NUM_REBANADAS = 8;
+
+const pizza = document.getElementById("pizzaLoading");
+const video = document.getElementById("promoVideo");
+const loader = document.getElementById("pizzaLoader");
+
+let rebanadas = [];
+
+for (let i = 0; i < NUM_REBANADAS; i++) {
+    const imagen = document.createElement("img");
+    imagen.src = "img/Logos/pizza1.png";
+    imagen.classList.add("rebanada");
+    imagen.alt = "";
+    imagen.style.transform = `rotate(${i * 45}deg)`;
+    pizza.appendChild(imagen);
+    rebanadas.push(imagen);
+}
+
+let actual = 0;
+rebanadas[actual].classList.add("off");
+
+const animacion = setInterval(() => {
+    rebanadas[actual].classList.remove("off");
+    actual = (actual + 1) % NUM_REBANADAS;
+    rebanadas[actual].classList.add("off");
+}, DURACION_CARGA / NUM_REBANADAS);
+
+let cargaFinalizada = false;
+
+function finalizarCarga() {
+    if (cargaFinalizada) return;
+    cargaFinalizada = true;
+
+    clearInterval(animacion);
+    loader.classList.add("hide");
+}
+
+video.addEventListener("canplay", finalizarCarga, { once: true });
+video.addEventListener("error", finalizarCarga, { once: true });
+
+if (video.readyState >= 3) {
+    finalizarCarga();
+}
